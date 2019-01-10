@@ -1,7 +1,7 @@
 FROM desiato/archlinux-bootstrap
 
 RUN pacman --noconfirm -Syyu && \
-pacman --noconfirm --needed -S diffutils file gawk gettext grep gzip inetutils iputils less logrotate procps-ng psmisc sed shadow sysfsutils tar util-linux which && \
+pacman --noconfirm --needed -S diffutils file gawk gettext grep gzip inetutils iputils less logrotate procps-ng psmisc sed shadow sysfsutils tar util-linux which audit && \
 echo -e 'y\ny' | pacman -Scc && \
 rm -r /usr/share/man/* && \
 sed -i '/^#en_US.UTF-8/s/^#//' /etc/locale.gen && \
