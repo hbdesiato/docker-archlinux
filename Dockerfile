@@ -1,4 +1,4 @@
-FROM desiato/archlinux-bootstrap
+FROM archlinux/archlinux
 
 RUN pacman --noconfirm -Syyu && \
 pacman --noconfirm --needed -S diffutils file gawk gettext grep gzip inetutils iputils less logrotate procps-ng psmisc sed shadow sysfsutils tar util-linux which audit && \
